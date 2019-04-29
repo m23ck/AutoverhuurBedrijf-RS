@@ -26,27 +26,26 @@ require_once "config.php";
 
 <body>
 
-  <div class="navbar-fixed">
-    <nav>
-      <div class="nav-wrapper indigo lighten-1 custom-nav">
-        <a href="./" class="brand-logo custom-logo">Dashboard</a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="klantenregistratie.php">Klanten</a></li>
-          <li><a href="voertuigenregistratie.php">Voertuigen</a></li>
-          <li><a href="verhuur.php">Verhuur</a></li>
+  <div class="row">
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper indigo lighten-1 custom-nav">
+          <a href="./" class="brand-logo custom-logo">Dashboard</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="klantenregistratie.php">Klanten</a></li>
+            <li><a href="voertuigenregistratie.php">Voertuigen</a></li>
+            <li><a href="verhuur.php">Verhuur</a></li>
 
-        </ul>
-      </div>
-    </nav>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </div>
   <br>
   <div class="row">
     <form class="col s12">
       <div class="row">
-        <div class="input-field col s1">
-          <input id="merk" type="text" class="validate">
-          <label for="merk">Merk</label>
-        </div>
+
         <div class="input-field col s1">
           <input id="kentekennummer" type="text" class="validate">
           <label for="kentekennummer">Kenteken</label>
