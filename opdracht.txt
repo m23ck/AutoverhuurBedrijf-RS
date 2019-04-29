@@ -1,0 +1,103 @@
+Maak een database met de gegevens van alle voertuigen van het verhuurbedrijf RS. RS is verhuurbedrijf 
+welke haar voertuigen aan verschillende individuen en aan bekende en grote bedrijven in Suriname verhuurd. 
+Van elke voertuig wordt de kilometerstand bijgehouden. 
+Met het tarief per km wordt dan de huurprijs uitgerekend. 
+Ga na welke tabellen en velden er moeten worden opgenomen in de database. 
+Maak vervolgens schermen voor:
+
+9april:
+-het registreren van voertuigen
+-het registreren van klanten (eventueel bedrijven)
+-het wijzigen van voertuigen (bijv. kmstand)
+-het verwijderen van voertuigen
+
+16april:
+- het opzoeken van voertuigen op een uniek veld
+- het opzoeken van klanten op uniek veld
+- het weergeven van een overzicht van de voertuigen die door een bepaald bedrijf zijn gehuurd
+
+23 april:
+De voertuigen komen uit verschillende categorieen.
+de categorie wordt door het verhuurbedrijf bepaald
+voor elke categorie is de huurtarief verschillend
+De boete en borgsom van de voertuigen verschilt ook per cat.
+indien bij terugkomst er schade is aan de auto wordt de borgsom volledig of gedeeltelijk  ingehouden.
+dit bedrag wortdt door de eigenaar van het verhuurbedrijf bepaald.
+indien de borgsom niet voldoende is om de schade te dekken wordt er ook nog een boete op gelegd.
+Bij het verhuren van de auto's moeten de huurders een overeenkomst ondertekenen met het verhuurbedrijf.
+dit overeenkomst haalt de gegevens van de klant en het verhuurbedrijf automatisch uit het systeem en maakt een document op.(print overeenkomst genereert document)
+en wordt vervolgens afgedrukt en daarna ondertekend door beide partijen.
+breng aanpassingen / uitbreidingen in het bestaande systeem zodanig dat de registratie van borgsom en boete kan plaatsvinden.
+Breng aanpassingen uitbreidingen in het systeem zodanig dat het overeenkomst afgedrukt kan worden.(creeer een pdf).
+
+
+
+-......................................................(wordt vervolgd)
+
+
+
+
+vars: 
+- kilometerstand
+- tarief p/ kilometer
+- huurprijs
+
+tbl_Klanten
+    col_klantid
+    col_naam
+    col_voornaam
+    col_bedrijf
+
+tbl_Voertuigen
+    col_voertuigid
+    col_merk
+    col_model
+    col_categorie
+    col_kentekennummer
+    col_bouwjaar
+    col_kilometerstand
+    col_status
+
+tbl_tarief
+    col_categorie
+    col_prijs_per_dag
+
+tbl_verhuur
+    col_huurid
+    col_voertuigid
+    col_klantid
+    col_uitgeefdatum
+    col_inleverdatum
+    col_prijs
+    col_status
+    
+
+
+    klantenregistratie
+    - veld_voornaam
+    - veld_achternaam
+    - veld_bedrijfsnaam
+    - veld-straatnaam
+    - veld-huisnummer
+    - veld-telefoon
+    - btn-toevoegen
+
+
+    voertuigen registratie
+    - veld_merk
+    - veld_model
+    - veld_categorie
+    - veld_kentekennummer 
+    - veld_bouwjaar 
+    - veld_kilometerstand
+    - veld_status
+    
+    voertuigenverhuur
+    - veld_merk
+    - veld_kentekennummer
+    - veld_klantnaam
+    - veld_bedrijf
+    - veld_uitgeefdatum
+    - veld_inleverdatum
+    - veld_prijs
+    - veld_status (betaald / onbetaald)
