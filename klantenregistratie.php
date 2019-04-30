@@ -21,7 +21,7 @@ require_once "config.php";
 
     <!-- custom -->
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" href="main.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 </head>
 
 <body>
@@ -42,7 +42,7 @@ require_once "config.php";
     </div>
     <br>
     <div class="row">
-        <form class="col s12" id="klantenregistratieform">
+        <form class="col s12" id="klantenregistratieform" >
             <div class="row">
                 <div class="input-field col s2">
                     <input id="naam" type="text" class="validate">
@@ -65,15 +65,16 @@ require_once "config.php";
                     <label for="huisnummer">#</label>
                 </div>
                 <div class="input-field col s1">
-                    <input id="huisnummer" type="text" class="validate">
-                    <label for="huisnummer">toevoeging</label>
+                    <input id="toevoeging" type="text" class="validate">
+                    <label for="toevoeging">toevoeging</label>
                 </div>
                 <div class="input-field col s1">
                     <input id="telefoon" type="text" class="validate">
                     <label for="telefoon">Telefoon</label>
                 </div>
                 <!-- <btn toevoegen -->
-                <button class="btn waves-effect waves-light indigo lighten-1" type="submit" name="action">Toevoegen
+                <button class="btn waves-effect waves-light indigo lighten-1" type="submit" name="action"
+                    onclick="addKlant()">Toevoegen
                 </button>
 
 
@@ -83,36 +84,8 @@ require_once "config.php";
 
     </div>
     <div class="row">
-        <table class="responsive-table">
-            <thead>
-                <tr>
-                    <th>Naam</th>
-                    <th>Voornaam</th>
-                    <th>Bedrijf</th>
-                    <th>Straatnaam</th>
-                    <th>#</th>
-                    <th>Toevoeging</th>
-                    <th>telefoon</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>Alvin</td>
-                    <td>Eclair</td>
-                    <td>$0.87</td>
-                </tr>
-                <tr>
-                    <td>Alan</td>
-                    <td>Jellybean</td>
-                    <td>$3.76</td>
-                </tr>
-                <tr>
-                    <td>Jonathan</td>
-                    <td>Lollipop</td>
-                    <td>$7.00</td>
-                </tr>
-            </tbody>
+        <table class="responsive-table" id="klantentabel">
+            
         </table>
     </div>
 

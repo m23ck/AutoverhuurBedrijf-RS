@@ -21,7 +21,7 @@ require_once "config.php";
 
       <!-- custom -->
       <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" href="main.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 </head>
 
 <body>
