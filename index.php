@@ -11,7 +11,7 @@ require_once "config.php";
     <meta charset="UTF-8">
     <title>Dashboard</title>
 
-<!--Import Google Icon Font-->
+  <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -21,7 +21,7 @@ require_once "config.php";
 
       <!-- custom -->
       <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="main.js"></script>
+
 </head>
 
 <body>
@@ -43,7 +43,7 @@ require_once "config.php";
 
 <!--JavaScript at end of body for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+    <script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>
