@@ -2,6 +2,18 @@
 // Include config file
 require_once "config.php";
 
+
+
+// Populate the table
+
+
+
+
+
+
+
+
+
  ?>
 
 <!DOCTYPE html>
@@ -92,10 +104,11 @@ require_once "config.php";
 
     </div>
     <div class="row">
-        <!-- <table class="responsive-table" id="klantentabel">
+        <table class="responsive-table" id="klantentabel">
             
-        </table> -->
-    
+        </table>
+
+                
     </div>
     
         </div>
