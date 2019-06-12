@@ -3,7 +3,7 @@
 
 
 // Include config file
-require_once "config.php";
+require_once "../config.php";
 
 
 
@@ -15,6 +15,7 @@ require_once "config.php";
             $toevoeging = mysqli_real_escape_string($link, $_POST['toevoeging']);
             $telefoon = mysqli_real_escape_string($link, $_POST['telefoon']);    
 
+           
 // if("SELECT * FROM tbl_klanten WHERE naam =='$naam' && voornaam ")
                 $sql = "INSERT INTO tbl_klanten(naam, voornaam, bedrijf, straatnaam, huisnummer, toevoeging, telefoon)
             VALUES ('$naam', '$voornaam', '$bedrijf', '$straatnaam', '$huisnummer', '$toevoeging', '$telefoon')";
@@ -23,7 +24,7 @@ require_once "config.php";
 
 
             if ($link->query($sql) === TRUE) {
-                header("Location: ./klantenregistratie.php/?success");
+                header("Location: ../klantenregistratie.php");
                 echo "New record created successfully";
             } else {
                 echo "Error: " . $sql . "<br>" . $link->error;

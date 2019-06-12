@@ -3,17 +3,6 @@
 require_once "config.php";
 
 
-
-// Populate the table
-
-
-
-
-
-
-
-
-
  ?>
 
 <!DOCTYPE html>
@@ -22,15 +11,16 @@ require_once "config.php";
 <head>
     <meta charset="UTF-8">
     <title>Klantenregistratie</title>
-<!-- Ajax -->
-  <link rel='stylesheet' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+    <!-- Ajax -->
+    <link rel='stylesheet' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
 
-  
+
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link rel="stylesheet" href="materialize/css/materialize.min.css">
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,6 +35,8 @@ require_once "config.php";
             <nav>
                 <div class="nav-wrapper indigo lighten-1 custom-nav">
                     <a href="./" class="brand-logo custom-logo">Dashboard</a>
+
+
                     <ul class="right hide-on-med-and-down">
                         <li><a href="klantenregistratie.php">Klanten</a></li>
                         <li><a href="voertuigenregistratie.php">Voertuigen</a></li>
@@ -57,14 +49,26 @@ require_once "config.php";
     </div>
     <br>
     <div class="row">
-        <form class="col s12" id="klantenregistratieform" method="POST" action="addklant.php">
+
+        <form class="col s12" method="GET" action="search/resultsklant.php">
+            <div class="input-field center-align col s4 offset-s4">
+                <input id="search" name="search_klant" type="search" required>
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons">close</i>
+            </div>
+        </form>
+
+    </div>
+    <br>
+    <div class="row">
+        <form class="col s12" id="klantenregistratieform" method="POST" action="addregistratie/addklant.php">
             <div class="row">
                 <div class="input-field col s2">
-                    <input id="naam" name="naam" type="text" class="validate">
+                    <input id="naam" name="naam" type="text" class="validate" required>
                     <label for="naam">Naam</label>
                 </div>
                 <div class="input-field col s2">
-                    <input id="voornaam" name="voornaam" type="text" class="validate">
+                    <input id="voornaam" name="voornaam" type="text" class="validate" required>
                     <label for="voornaam">Voornaam</label>
                 </div>
                 <div class="input-field col s2">
@@ -72,11 +76,11 @@ require_once "config.php";
                     <label for="bedrijf">Bedrijf</label>
                 </div>
                 <div class="input-field col s1">
-                    <input id="straatnaam" name="straatnaam" type="text" class="validate">
+                    <input id="straatnaam" name="straatnaam" type="text" class="validate" required>
                     <label for="straatnaam">Straatnaam</label>
                 </div>
                 <div class="input-field col s1">
-                    <input id="huisnummer" name="huisnummer" type="text" class="validate">
+                    <input id="huisnummer" name="huisnummer" type="text" class="validate" required>
                     <label for="huisnummer">#</label>
                 </div>
                 <div class="input-field col s1">
@@ -93,30 +97,61 @@ require_once "config.php";
                 </button>
 
 
-
             </div>
         </form>
-
-            
-                
-            
-
+        <br>
 
     </div>
+
     <div class="row">
         <table class="responsive-table" id="klantentabel">
-            
+            <th>ID</th>
+            <th>Naam</th>
+            <th>Voornaam</th>
+            <th>Bedrijf</th>
+            <th>Straatnaam</th>
+            <th>#</th>
+            <th>Toevoeging</th>
+            <th>Telefoon</th>
+
+            <?php
+
+    $results = mysqli_query($link,"SELECT * FROM tbl_klanten");
+            while($row = mysqli_fetch_array($results)) {
+            ?>
+
+            <tr>
+                <td><?php echo $row['klantid']?></td>
+                <td><?php echo $row['naam']?></td>
+                <td><?php echo $row['voornaam']?></td>
+                <td><?php echo $row['bedrijf']?></td>
+                <td><?php echo $row['straatnaam']?></td>
+                <td><?php echo $row['huisnummer']?></td>
+                <td><?php echo $row['toevoeging']?></td>
+                <td><?php echo $row['telefoon']?></td>
+            </tr>
+
+            <?php
+            }
+
+            ?>
+
+
+
         </table>
 
-                
-    </div>
-    
-        </div>
 
-    
+    </div>
+    <br>
+
+    </div>
+
+
     <!--JavaScript at end of body for optimized loading-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-     <script type="text/javascript" src="main.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+    <script type="text/javascript" src="main.js"></script>
 
 </body>
 

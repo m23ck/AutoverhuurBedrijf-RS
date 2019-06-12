@@ -8,19 +8,20 @@ Maak vervolgens schermen voor:
 9april:
 -het registreren van voertuigen
 -het registreren van klanten (eventueel bedrijven)
--het wijzigen van voertuigen (bijv. kmstand)
--het verwijderen van voertuigen
+-het wijzigen van voertuigen (bijv. kmstand) *
+-het verwijderen van voertuigen *
 
 16april:
-- het opzoeken van voertuigen op een uniek veld
+- het opzoeken van voertuigen op een uniek veld 
 - het opzoeken van klanten op uniek veld
-- het weergeven van een overzicht van de voertuigen die door een bepaald bedrijf zijn gehuurd
+- het weergeven van een overzicht van de voertuigen die door een bepaald bedrijf zijn gehuurd *
 
 23 april:
 De voertuigen komen uit verschillende categorieen.
 de categorie wordt door het verhuurbedrijf bepaald
 voor elke categorie is de huurtarief verschillend
 De boete en borgsom van de voertuigen verschilt ook per cat.
+
 indien bij terugkomst er schade is aan de auto wordt de borgsom volledig of gedeeltelijk  ingehouden.
 dit bedrag wortdt door de eigenaar van het verhuurbedrijf bepaald.
 indien de borgsom niet voldoende is om de schade te dekken wordt er ook nog een boete op gelegd.
